@@ -7,7 +7,15 @@ import org.springframework.stereotype.Component;
 
 import com.onlinetechvision.model.Order;
 
-
+/**
+ * Order Splitter breaks incoming Order List into Order message(s) 
+ * and send them to the output channel.
+ * 
+ * @author Eren Avsarogullari
+ * @since 15 Jan 2015
+ * @version 1.0.0
+ *
+ */
 @Component("orderSplitter")
 public class OrderSplitter {
 
