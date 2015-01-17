@@ -3,7 +3,7 @@ package com.onlinetechvision.process.service;
 import org.springframework.messaging.Message;
 
 /**
- * Generic Process Service Interface exposes process service funtionality.
+ * Generic Process Service Interface exposes process service functionality.
  * 
  * @author Eren Avsarogullari
  * @since 15 Jan 2015

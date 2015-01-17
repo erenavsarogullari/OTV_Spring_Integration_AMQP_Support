@@ -32,9 +32,9 @@
 
 	<!-- RabbitMQ Connection Factory -->
 	<rabbit:connection-factory id="connectionFactory"
-				addresses="${rabbitmq.addresses}" 
-				username="${rabbitmq.username}"
-				password="${rabbitmq.password}" />
+									addresses="${rabbitmq.addresses}" 
+									username="${rabbitmq.username}"
+									password="${rabbitmq.password}" />
 				
 	<int:splitter id="orderSplitter" input-channel="inputChannel" output-channel="processChannel" />
 	
