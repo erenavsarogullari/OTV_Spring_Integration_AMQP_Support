@@ -6,8 +6,8 @@
 	<version>0.0.1-SNAPSHOT</version>
 
 	<properties>
-		<spring.version>4.1.2.RELEASE</spring.version>
-		<spring.integration.version>4.1.0.RELEASE</spring.integration.version>
+		<spring.version>4.1.4.RELEASE</spring.version>
+		<spring.integration.version>4.1.2.RELEASE</spring.integration.version>
 	</properties>
 
 	<dependencies>

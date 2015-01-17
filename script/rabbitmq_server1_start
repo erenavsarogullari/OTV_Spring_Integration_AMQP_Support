@@ -1,0 +1,17 @@
+#!/bin/bash
+echo "*** First RabbitMQ Server is setting up ***"
+
+export RABBITMQ_HOSTNAME=rabbit@master
+export RABBITMQ_NODE_PORT=5672
+export RABBITMQ_NODENAME=rabbit@master
+export RABBITMQ_SERVER_START_ARGS="-rabbitmq_management listener [{port,15672}]"
+
+/bin/bash /DEV_TOOLS/rabbitmq_server-3.4.2/sbin/rabbitmq-server &
+
+echo "*** Second RabbitMQ Server is set up succesfully. ***"
+
+sleep 5
+
+echo "*** First RabbitMQ Server' s status : ***"
+
+/bin/bash /DEV_TOOLS/rabbitmq_server-3.4.2/sbin/rabbitmqctl status

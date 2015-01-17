@@ -1,0 +1,34 @@
+#!/bin/bash
+echo "*** Second RabbitMQ Server is setting up ***"
+
+export RABBITMQ_HOSTNAME=rabbit2@master
+export RABBITMQ_NODE_PORT=5673
+export RABBITMQ_NODENAME=rabbit2@master
+export RABBITMQ_SERVER_START_ARGS="-rabbitmq_management listener [{port,15673}]"
+
+/bin/bash /DEV_TOOLS/rabbitmq_server-3.4.2_2/sbin/rabbitmq-server &
+
+echo "*** Second RabbitMQ Server is set up succesfully. ***"
+
+sleep 5
+
+echo "*** Second RabbitMQ Server' s status : ***"
+
+/bin/bash /DEV_TOOLS/rabbitmq_server-3.4.2_2/sbin/rabbitmqctl status
+
+sleep 5
+
+echo "*** Second RabbitMQ Server is being added to cluster... ***"
+
+/bin/bash /DEV_TOOLS/rabbitmq_server-3.4.2_2/sbin/rabbitmqctl -n rabbit2@master stop_app
+/bin/bash /DEV_TOOLS/rabbitmq_server-3.4.2_2/sbin/rabbitmqctl -n rabbit2@master join_cluster rabbit@master
+/bin/bash /DEV_TOOLS/rabbitmq_server-3.4.2_2/sbin/rabbitmqctl -n rabbit2@master start_app
+/bin/bash /DEV_TOOLS/rabbitmq_server-3.4.2/sbin/rabbitmqctl -n rabbit@master set_policy ha-all "^ha\." '{"ha-mode":"all"}'
+
+echo "*** Second RabbitMQ Server is added to cluster successfully... ***"
+
+sleep 5
+
+echo "*** Second RabbitMQ Server' s cluster status : ***"
+
+/bin/bash /DEV_TOOLS/rabbitmq_server-3.4.2_2/sbin/rabbitmqctl cluster_status
