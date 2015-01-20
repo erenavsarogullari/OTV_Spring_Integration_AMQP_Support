@@ -3,7 +3,7 @@ package com.onlinetechvision.model;
 import java.io.Serializable;
 
 /**
- * Order Bean models order request
+ * Order Bean models order messages
  * 
  * @author Eren Avsarogullari
  * @since 15 Jan 2015

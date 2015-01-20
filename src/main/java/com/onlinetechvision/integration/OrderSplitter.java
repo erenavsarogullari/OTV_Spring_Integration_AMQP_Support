@@ -20,7 +20,7 @@ import com.onlinetechvision.model.Order;
 public class OrderSplitter {
 
     /**
-     * Splits Order List to Order request(s)
+     * Splits Order List to Order messages
      *
      * @param message SI Message covering Order List payload.
      * @return order list

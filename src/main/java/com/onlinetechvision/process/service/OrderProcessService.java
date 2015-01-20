@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import com.onlinetechvision.model.Order;
 
 /**
- * Order Process Service Implementation
+ * Order Process Service Activator listens processChannel and logs incoming Order messages.
  * 
  * @author Eren Avsarogullari
  * @since 15 Jan 2015

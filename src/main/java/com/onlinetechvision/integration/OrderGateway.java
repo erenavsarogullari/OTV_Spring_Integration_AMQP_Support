@@ -7,7 +7,7 @@ import org.springframework.messaging.Message;
 import com.onlinetechvision.model.Order;
 
 /**
- * Cargo Gateway Interface exposes domain-specific method to the application. In
+ * Order Gateway Interface exposes domain-specific method to the application. In
  * other words, it provides an application access to the messaging system.
  * 
  * @author Eren Avsarogullari

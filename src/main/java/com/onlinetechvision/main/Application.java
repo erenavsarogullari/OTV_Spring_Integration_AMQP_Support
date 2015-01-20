@@ -13,7 +13,8 @@ import com.onlinetechvision.integration.OrderGateway;
 import com.onlinetechvision.model.Order;
 
 /**
- * Application class starts the application
+ * Application Class runs the application by initializing application context 
+ * and sends order requests to messaging system.
  * 
  * @author Eren Avsarogullari
  * @since 15 Jan 2015
